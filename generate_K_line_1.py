@@ -15,7 +15,7 @@ def dmy2ymd(dmy):
 # converters表示对数据进行预处理，我们可以先定义一个函数， 这里的converters是一个字典, 表示第一列使用函数dmy2ymd函数来进行预处理
 dates, opening_prices, highest_prices, lowest_prices, closing_prices \
     = np.loadtxt(
-        'MSFT19972012.csv',
+        'MSFT19972012_1.csv',
         delimiter=',', usecols=(0,1, 2, 3, 4), unpack=True,
         dtype='M8[D],f8,f8,f8,f8', converters={0: dmy2ymd})
 
